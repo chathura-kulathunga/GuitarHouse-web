@@ -1,0 +1,483 @@
+Project Summary – E-Commerce Web Application for Guitar Shop
+This project is a responsive e-commerce web application designed for a guitar shop that sells **guitars, straps, and amplifiers**. The application is built using **HTML, CSS, JavaScript, and Bootstrap** for front-end development, ensuring mobile responsiveness and a modern UI. The back-end is developed using **PHP**, and all functionality is integrated into `.php` files. The system will include features such as product listings, shopping cart functionality, user authentication, and order processing.
+
+
+Here's a full list of essential `.php` files you should create for your **E-Commerce Guitar Shop Web Application**, including both the **user side** and the **admin panel**. This list is organized by functionality for clarity:
+
+
+### ✅ **MAIN FOLDER STRUCTURE**
+
+You can organize your project like this:
+
+```
+/project-root
+│
+├── /assets          → CSS, JS, images, Bootstrap files
+├── /includes        → Header, footer, DB connection, etc.
+├── /admin           → Admin panel files
+├── /uploads         → Uploaded product images
+├── config.php       → DB connection
+├── index.php        → Homepage
+├── product.php      → Product details page
+├── shop.php         → All products
+├── cart.php         → Shopping cart
+├── checkout.php     → Checkout form
+├── order-success.php→ Order confirmation
+├── login.php        → User login
+├── register.php     → User registration
+├── logout.php       → User logout
+└── contact.php      → Contact us page
+```
+
+---
+
+### 📦 **FRONT-END (Customer/User Side)**
+
+| File Name           | Purpose                                                           |
+| ------------------- | ----------------------------------------------------------------- |
+| `index.php`         | Homepage with featured products, banners, etc.                    |
+| `shop.php`          | Page displaying all products with filters (guitars, straps, amps) |
+| `product.php?id=X`  | Product details page (dynamic via `GET` param)                    |
+| `cart.php`          | View cart, update quantity, remove items                          |
+| `checkout.php`      | Shipping form and place order button                              |
+| `order-success.php` | Confirmation page after successful order                          |
+| `login.php`         | Customer login                                                    |
+| `register.php`      | Customer registration                                             |
+| `logout.php`        | Logout and destroy session                                        |
+| `contact.php`       | Contact form or shop contact info                                 |
+
+---
+
+### ⚙️ **INCLUDES / REUSABLE COMPONENTS**
+
+| File Name       | Purpose                             |
+| --------------- | ----------------------------------- |
+| `header.php`    | Header/navigation bar               |
+| `footer.php`    | Footer with links                   |
+| `config.php`    | Database connection settings        |
+| `functions.php` | Common functions (e.g., cart logic) |
+| `auth.php`      | Session checks for user pages       |
+
+---
+
+### 🛒 **FUNCTIONAL BACKEND FILES (AJAX or Forms Processing)**
+
+| File Name              | Purpose                                     |
+| ---------------------- | ------------------------------------------- |
+| `add-to-cart.php`      | Handle adding products to cart              |
+| `update-cart.php`      | Update cart quantities                      |
+| `remove-from-cart.php` | Remove product from cart                    |
+| `place-order.php`      | Process checkout and save order to database |
+| `login-process.php`    | Handle login form submission                |
+| `register-process.php` | Handle registration form submission         |
+| `contact-process.php`  | Handle contact form submission              |
+
+---
+
+### 🔐 **ADMIN PANEL (in `/admin` folder)**
+
+| File Name                     | Purpose                                     |
+| ----------------------------- | ------------------------------------------- |
+| `admin-login.php`             | Admin login form                            |
+| `admin-dashboard.php`         | Admin dashboard/summary view                |
+| `admin-logout.php`            | Logout and destroy admin session            |
+| `admin-add-product.php`       | Add a new product form                      |
+| `admin-insert-product.php`    | Process form submission for adding products |
+| `admin-manage-products.php`   | View, edit, or delete all products          |
+| `admin-edit-product.php?id=X` | Edit product details                        |
+| `admin-update-product.php`    | Save updated product info                   |
+| `admin-delete-product.php`    | Delete product                              |
+| `admin-orders.php`            | View customer orders                        |
+| `admin-view-order.php?id=X`   | View full details of a specific order       |
+| `admin-manage-users.php`      | View or delete registered users             |
+
+---
+
+
+---
+
+## 📁 **Updated Full Project Folder Structure**
+
+```
+/project-root
+│
+├── /assets                   → CSS, JS, images, Bootstrap, custom styles
+│   ├── /css
+│   │   ├── bootstrap.min.css       → Bootstrap CSS
+│   │   └── style.css               → Your custom styles
+│   ├── /js
+│   │   ├── bootstrap.bundle.min.js → Bootstrap JS (includes Popper)
+│   │   └── script.js               → Your custom JS
+│   └── /images                     → Site images
+│
+├── /uploads                 → Product image uploads (used by admin)
+│
+├── /includes                → Reusable parts
+│   ├── header.php
+│   ├── footer.php
+│   ├── config.php           → DB connection
+│   ├── functions.php        → Common utility functions
+│   ├── auth.php             → Session check for users
+│   └── admin-auth.php       → Session check for admin
+│
+├── /admin                   → Admin panel only
+│   ├── admin-login.php
+│   ├── admin-logout.php
+│   ├── admin-dashboard.php
+│   ├── admin-add-product.php
+│   ├── admin-insert-product.php
+│   ├── admin-manage-products.php
+│   ├── admin-edit-product.php
+│   ├── admin-update-product.php
+│   ├── admin-delete-product.php
+│   ├── admin-orders.php
+│   ├── admin-view-order.php
+│   └── admin-manage-users.php
+│
+├── /user                    → User-specific views
+│   ├── profile.php          → Update user info + address
+│   ├── my-orders.php        → View user orders
+│
+├── /actions                 → Backend handlers (form processing)
+│   ├── login-process.php
+│   ├── register-process.php
+│   ├── logout.php
+│   ├── add-to-cart.php
+│   ├── update-cart.php
+│   ├── remove-from-cart.php
+│   ├── place-order.php
+│   ├── update-profile.php
+│   └── contact-process.php
+│
+├── index.php                → Homepage
+├── shop.php                 → All products listing
+├── product.php              → Single product details page
+├── cart.php                 → Cart display + update/delete
+├── checkout.php             → Address validation + place order
+├── order-success.php        → Order placed success screen
+├── login.php                → User login form
+├── register.php             → User registration form
+├── contact.php              → Contact us form
+└── about.php                → About the guitar shop (optional)
+
+```
+color theme, 
+#FEF3E2
+#F3C623
+#FFB22C
+#FA812F
+
+---
+
+## 🧾 **Highlights of This Structure**
+
+* **`/user/profile.php`** handles dynamic profile updates (address, mobile, etc.) after registration.
+* **`/actions/update-profile.php`** processes profile form and updates DB.
+* Admin features are all **modular** inside `/admin` folder.
+* All back-end processes (cart, login, register, etc.) are inside `/actions`.
+
+---
+
+
+
+---
+
+## 🧠 DATABASE NAME: `guitar_shop_db`
+
+---
+
+### 🧍‍♂️ `users` — Customer accounts
+
+| Column      | Type         | Description                    |
+| ----------- | ------------ | ------------------------------ |
+| user\_id    | INT PK AI    | Unique customer ID             |
+| email       | VARCHAR(100) | Email address (used for login) |
+| password    | VARCHAR(255) | Hashed password                |
+| first\_name | VARCHAR(50)  | First name                     |
+| last\_name  | VARCHAR(50)  | Last name                      |
+| nic         | VARCHAR(20)  | NIC number                     |
+| mobile      | VARCHAR(15)  | Mobile number                  |
+| address\_id | INT FK       | Linked to address table        |
+| created\_at | DATETIME     | Registration date              |
+
+---
+
+### 🧑‍💼 `admins` — Admin accounts
+
+| Column      | Type         | Description             |
+| ----------- | ------------ | ----------------------- |
+| admin\_id   | INT PK AI    | Unique admin ID         |
+| email       | VARCHAR(100) | Admin login email       |
+| password    | VARCHAR(255) | Hashed password         |
+| first\_name | VARCHAR(50)  | First name              |
+| last\_name  | VARCHAR(50)  | Last name               |
+| nic         | VARCHAR(20)  | NIC number              |
+| mobile      | VARCHAR(15)  | Mobile number           |
+| address\_id | INT FK       | Linked to address table |
+| created\_at | DATETIME     | Created timestamp       |
+
+---
+
+### 📦 `products`
+
+| Column       | Type          | Description       |
+| ------------ | ------------- | ----------------- |
+| product\_id  | INT PK AI     | Unique product ID |
+| name         | VARCHAR(100)  | Product name      |
+| description  | TEXT          | Full description  |
+| price        | DECIMAL(10,2) | Price             |
+| stock        | INT           | Available stock   |
+| category\_id | INT FK        | Product category  |
+| image\_path  | VARCHAR(255)  | Image file path   |
+| created\_at  | DATETIME      | Added date        |
+
+---
+
+### 🎸 `categories`
+
+| Column       | Type        | Description                    |
+| ------------ | ----------- | ------------------------------ |
+| category\_id | INT PK AI   | Unique category ID             |
+| name         | VARCHAR(50) | e.g., Guitar, Strap, Amplifier |
+
+---
+
+### 🛒 `cart_items`
+
+| Column         | Type      | Description          |
+| -------------- | --------- | -------------------- |
+| cart\_item\_id | INT PK AI | Unique ID            |
+| user\_id       | INT FK    | User owning the cart |
+| product\_id    | INT FK    | Product added        |
+| quantity       | INT       | How many             |
+
+---
+
+### 📬 `orders`
+
+| Column        | Type          | Description                       |
+| ------------- | ------------- | --------------------------------- |
+| order\_id     | INT PK AI     | Unique order ID                   |
+| user\_id      | INT FK        | User who placed the order         |
+| address\_id   | INT FK        | Address used at time of order     |
+| total\_amount | DECIMAL(10,2) | Order total                       |
+| status        | VARCHAR(50)   | pending, shipped, delivered, etc. |
+| ordered\_at   | DATETIME      | Date of order                     |
+
+---
+
+### 📦 `order_items`
+
+| Column          | Type          | Description            |
+| --------------- | ------------- | ---------------------- |
+| order\_item\_id | INT PK AI     | Unique ID              |
+| order\_id       | INT FK        | Linked to order        |
+| product\_id     | INT FK        | Product purchased      |
+| quantity        | INT           | Quantity purchased     |
+| price           | DECIMAL(10,2) | Price at time of order |
+
+---
+
+### 🏠 `addresses`
+
+| Column      | Type         | Description       |
+| ----------- | ------------ | ----------------- |
+| address\_id | INT PK AI    | Unique address ID |
+| line1       | VARCHAR(100) | Address line 1    |
+| line2       | VARCHAR(100) | Address line 2    |
+| city\_id    | INT FK       | Linked to city    |
+| zip\_code   | VARCHAR(10)  | Postal/ZIP code   |
+
+---
+
+### 🏙️ `cities`
+
+| Column       | Type        | Description        |
+| ------------ | ----------- | ------------------ |
+| city\_id     | INT PK AI   | Unique city ID     |
+| city\_name   | VARCHAR(50) | City name          |
+| district\_id | INT FK      | Linked to district |
+
+---
+
+### 🌍 `districts`
+
+| Column         | Type        | Description        |
+| -------------- | ----------- | ------------------ |
+| district\_id   | INT PK AI   | Unique district ID |
+| district\_name | VARCHAR(50) | District name      |
+| province\_id   | INT FK      | Linked to province |
+
+---
+
+### 🗺️ `provinces`
+
+| Column         | Type        | Description        |
+| -------------- | ----------- | ------------------ |
+| province\_id   | INT PK AI   | Unique province ID |
+| province\_name | VARCHAR(50) | Province name      |
+
+---
+
+### ✉️ `contacts` — User messages
+
+| Column      | Type         | Description          |
+| ----------- | ------------ | -------------------- |
+| contact\_id | INT PK AI    | Unique contact ID    |
+| name        | VARCHAR(100) | User full name       |
+| email       | VARCHAR(100) | Email address        |
+| subject     | VARCHAR(150) | Subject/title        |
+| message     | TEXT         | Message content      |
+| sent\_at    | DATETIME     | Submission timestamp |
+
+---
+
+Let me know if you want:
+
+* ER diagram 💠
+* Sample SQL insert values 📥
+* Or move to frontend forms next 📄
+
+This is fully ready for practical coding with PHP + MySQL, ayya 🔥
+
+Got it! Here's the **complete SQL code** to create all the normalized tables for your guitar shop e-commerce web application, based on your detailed requirements (user/admin registration, full address breakdown, shopping, and orders).
+
+---
+
+### 📄 **SQL Script — Guitar Shop E-Commerce DB**
+
+```sql
+CREATE DATABASE IF NOT EXISTS guitar_shop;
+USE guitar_shop;
+
+-- PROVINCES
+CREATE TABLE provinces (
+    province_id INT AUTO_INCREMENT PRIMARY KEY,
+    province_name VARCHAR(100) NOT NULL
+);
+
+-- DISTRICTS
+CREATE TABLE districts (
+    district_id INT AUTO_INCREMENT PRIMARY KEY,
+    district_name VARCHAR(100) NOT NULL,
+    province_id INT,
+    FOREIGN KEY (province_id) REFERENCES provinces(province_id)
+);
+
+-- CITIES
+CREATE TABLE cities (
+    city_id INT AUTO_INCREMENT PRIMARY KEY,
+    city_name VARCHAR(100) NOT NULL,
+    district_id INT,
+    FOREIGN KEY (district_id) REFERENCES districts(district_id)
+);
+
+-- ADDRESSES
+CREATE TABLE addresses (
+    address_id INT AUTO_INCREMENT PRIMARY KEY,
+    line1 VARCHAR(150) NOT NULL,
+    line2 VARCHAR(150),
+    city_id INT,
+    zip_code VARCHAR(10),
+    FOREIGN KEY (city_id) REFERENCES cities(city_id)
+);
+
+-- USERS
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    nic VARCHAR(20),
+    mobile VARCHAR(15),
+    address_id INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (address_id) REFERENCES addresses(address_id)
+);
+
+-- ADMINS
+CREATE TABLE admins (
+    admin_id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    first_name VARCHAR(100),
+    last_name VARCHAR(100),
+    nic VARCHAR(20),
+    mobile VARCHAR(15),
+    address_id INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (address_id) REFERENCES addresses(address_id)
+);
+
+-- PRODUCT CATEGORIES
+CREATE TABLE categories (
+    category_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+-- PRODUCTS
+CREATE TABLE products (
+    product_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(150) NOT NULL,
+    description TEXT,
+    price DECIMAL(10,2),
+    stock INT,
+    category_id INT,
+    image_path VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (category_id) REFERENCES categories(category_id)
+);
+
+-- CART ITEMS
+CREATE TABLE cart_items (
+    cart_item_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    product_id INT,
+    quantity INT,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
+
+-- ORDERS
+CREATE TABLE orders (
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    address_id INT,
+    total_amount DECIMAL(10,2),
+    status VARCHAR(50) DEFAULT 'Pending',
+    ordered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (address_id) REFERENCES addresses(address_id)
+);
+
+-- ORDER ITEMS
+CREATE TABLE order_items (
+    order_item_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT,
+    product_id INT,
+    quantity INT,
+    price DECIMAL(10,2),
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),
+    FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
+
+-- CONTACT MESSAGES
+CREATE TABLE contacts (
+    contact_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    subject VARCHAR(150),
+    message TEXT,
+    sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+---
+
+Would you like sample **insert statements** or mock data for testing this schema?
+
+And thank you for the correction, noted! 😊
+
+
+
