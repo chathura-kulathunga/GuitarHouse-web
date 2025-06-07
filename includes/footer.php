@@ -12,7 +12,7 @@
 
 <body>
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
+    <footer class="bg-dark text-white text-center py-3">
         <small>&copy; <?php echo date("Y"); ?> GuitarHouse. All rights reserved.</small>
     </footer>
 
