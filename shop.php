@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Shop - GuitarShop</title>
+    <link rel="icon" href="assets/images/home/logo.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/shop-style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
@@ -22,7 +23,7 @@
             <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="custom-card h-100 d-flex flex-column">
                     <div class="product-img">
-                        <img src="assets/images/guitar1.jpg" alt="Gibson Les Paul" />
+                        <img src="assets/images/shop/guitar1.jpg" alt="Gibson Les Paul" />
                     </div>
                     <div class="custom-card-body d-flex flex-column">
                         <h5 class="product-title">Fender Stratocaster Electric Guitar</h5>
@@ -50,7 +51,7 @@
             <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="custom-card h-100 d-flex flex-column">
                     <div class="product-img">
-                        <img src="assets/images/guitar2.jpg" alt="Gibson Les Paul" />
+                        <img src="assets/images/shop/guitar2.jpg" alt="Gibson Les Paul" />
                     </div>
                     <div class="custom-card-body d-flex flex-column">
                         <h5 class="product-title">Ibanez RGRT420 WK Electric Guitar</h5>
@@ -78,7 +79,7 @@
             <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="custom-card h-100 d-flex flex-column">
                     <div class="product-img">
-                        <img src="assets/images/guitar3.jpg" alt="Gibson Les Paul" />
+                        <img src="assets/images/shop/guitar3.jpg" alt="Gibson Les Paul" />
                     </div>
                     <div class="custom-card-body d-flex flex-column">
                         <h5 class="product-title">Yamaha FS800 Acoustic Guitar</h5>
@@ -106,7 +107,7 @@
             <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="custom-card h-100 d-flex flex-column">
                     <div class="product-img">
-                        <img src="assets/images/guitar4.jpg" alt="Gibson Les Paul" />
+                        <img src="assets/images/shop/guitar4.jpg" alt="Gibson Les Paul" />
                     </div>
                     <div class="custom-card-body d-flex flex-column">
                         <h5 class="product-title">Yamaha FS800 Acoustic Guitar</h5>
@@ -130,13 +131,17 @@
                 </div>
             </div>
 
-            <!-- Add more product cards as needed -->
         </div>
     </div>
 
     <?php include('includes/footer.php'); ?>
+    
+    <!-- Scroll to Top Button -->
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <!-- Bootstrap JS -->
+    <!-- JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
