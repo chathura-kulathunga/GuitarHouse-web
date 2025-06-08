@@ -88,3 +88,11 @@
 .icon-btn:hover {
   color: #F3C623;
 }
+
+.modal-content {
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.modal-body img {
+  border: 1px solid #ddd;
+}
