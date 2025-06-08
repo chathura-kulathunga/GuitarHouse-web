@@ -4,25 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <title>Guitar House</title>
+    <link rel="icon" href="assets/images/home/logo.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body>
 
     <?php include('includes/header.php'); ?>
 
-    <!-- Hero Section -->
-    <section class="hero text-center d-flex align-items-center justify-content-center">
-        <div>
-            <h1 class="display-4">Welcome to Guitar House Online Store</h1>
-            <p class="lead">Shop premium guitars and accessories</p>
-            <a href="shop.php" class="btn btn-primary mt-3">Shop Now</a>
+    <section class="hero text-center d-flex align-items-center justify-content-center" style="height: 100vh;">
+        <div id="heroCarousel" class="carousel slide w-100" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="d-flex">
+                        <div class="bg-dark bg-opacity-50 p-4 rounded">
+                            <h1 class="display-4">Welcome to Guitar House Online Store</h1>
+                            <p class="lead">Shop premium guitars and accessories</p>
+                            <a href="shop.php" class="btn btn-primary mt-3">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="d-flex">
+                        <div class="bg-dark bg-opacity-50 p-4 rounded">
+                            <h1 class="display-4">Discover Acoustic & Electric Guitars</h1>
+                            <p class="lead">Top brands at the best prices</p>
+                            <a href="shop.php" class="btn btn-success mt-3">Explore Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="d-flex">
+                        <div class="bg-dark bg-opacity-50 p-4 rounded">
+                            <h1 class="display-4">Accessories for Every Guitarist</h1>
+                            <p class="lead">Strings, straps, tuners & more</p>
+                            <a href="shop.php" class="btn btn-warning mt-3">Browse Accessories</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" role="button">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" role="button">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </section>
 
@@ -95,13 +137,15 @@
     <?php include('includes/footer.php'); ?>
 
     <!-- Scroll to Top Button -->
-<button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">
-  <i class="fas fa-arrow-up"></i>
-</button>
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
