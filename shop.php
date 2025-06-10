@@ -15,11 +15,45 @@
 
     <?php include('includes/header.php'); ?>
 
+    <!-- Search & Filter Section with Light Background -->
+    <section style="background-color: #2f2f2f;" class="text-light py-4">
+        <div class="container">
+            <div class="row gy-3 align-items-center justify-content-between">
+                
+                <!-- Category Dropdown (Left) -->
+                <div class="col-md-3 text-md-start text-center">
+                    <select class="form-select bg-dark text-light border-light" onchange="location = this.value;">
+                        <option selected disabled>Choose Category</option>
+                        <option value="electric.php">Electric</option>
+                        <option value="acoustic.php">Acoustic</option>
+                        <option value="bass.php">Bass</option>
+                        <option value="classical.php">Classical</option>
+                    </select>
+                </div>
+
+                <!-- Search Bar (Center) -->
+                <div class="col-md-5">
+                    <form class="d-flex justify-content-center" method="GET" action="search.php">
+                        <input type="text" name="query" class="form-control me-2" placeholder="Search guitars..."
+                            style="background-color: #3a3a3a; color: #fff; border: 1px solid #6c757d;">
+                        <button type="submit" class="btn btn-outline-light">Search</button>
+                    </form>
+                </div>
+
+                <!-- Navigation Buttons (Right) -->
+                <div class="col-md-4 text-md-end text-center">
+                    <a href="about.php" class="btn btn-outline-light me-2">About Us</a>
+                    <a href="brands.php" class="btn btn-outline-light">Brands</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <div class="container py-5">
         <h2 class="mb-4 text-center">Our Guitars</h2>
         <div class="row g-4">
 
-            <!-- Product Card 1 -->
             <!-- Product Card 1 -->
             <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="custom-card h-100 d-flex flex-column">
