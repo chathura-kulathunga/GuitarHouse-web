@@ -112,3 +112,26 @@
 .thumb-img:hover {
   border-color: #0d6efd;
 }
+
+/* feedback button */
+.feedback-tab {
+  position: fixed;
+  top: 45%;
+  right: 40px;
+  background: linear-gradient(135deg, #00c6ff, #fcd34d); /* Blue to yellow */
+  color: black;
+  padding: 12px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ff7700; /* <-- Nice semi-transparent white border */
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.feedback-tab:hover {
+  background: linear-gradient(135deg, #0099ff, #ffe066);
+}
