@@ -7,6 +7,7 @@
     <link rel="icon" href="assets/images/home/logo.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/shop-style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
@@ -226,6 +227,9 @@
     <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Feedback Button -->
+     <a href="feedback.html" class="feedback-tab">Feedback</a>
 
     <!-- JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
