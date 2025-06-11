@@ -1,0 +1,137 @@
+/* === Product Card Section === */
+.custom-card {
+  background-color: #fff8ee; 
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(250, 129, 47, 0.25);
+}
+
+.product-img {
+  background: #FEF3E2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.custom-card-body {
+  padding: 15px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-title {
+  color: #FA812F;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.product-desc {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+/* === Icon Group Section === */
+.icon-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  background-color: #FEF3E2; 
+  padding: 8px 12px;
+  border-radius: 25px;
+}
+
+.icon-btn {
+  background-color: transparent;
+  border: none;
+  color: #FA812F; 
+  font-size: 22px; 
+  transition: 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  color: #F3C623;
+}
+
+/* Modal box */
+.modal-content {
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.main-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+} 
+.thumb-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+.thumb-img:hover {
+  border-color: #0d6efd;
+}
+
+/* feedback button */
+.feedback-tab {
+  position: fixed;
+  top: 45%;
+  right: 40px;
+  background: linear-gradient(135deg, #00c6ff, #fcd34d); /* Blue to yellow */
+  color: black;
+  padding: 12px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ff7700; /* <-- Nice semi-transparent white border */
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+.feedback-tab:hover {
+  background: linear-gradient(135deg, #0099ff, #ffe066);
+}
