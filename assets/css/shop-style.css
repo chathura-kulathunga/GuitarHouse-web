@@ -135,3 +135,21 @@
 .feedback-tab:hover {
   background: linear-gradient(135deg, #0099ff, #ffe066);
 }
+
+/* Login Modal styles */
+.modal-content {
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(250, 129, 47, 0.3);
+}
+.modal-title {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.modal .form-label {
+  font-weight: 500;
+}
+.modal .btn-outline-light:hover {
+  background-color: #FA812F;
+  color: #000;
+  border-color: #FA812F;
+}
