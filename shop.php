@@ -20,7 +20,7 @@
     <section style="background-color: #2f2f2f;" class="text-light py-4">
         <div class="container">
             <div class="row gy-3 align-items-center justify-content-between">
-                
+
                 <!-- Category Dropdown (Left) -->
                 <div class="col-md-3 text-md-start text-center">
                     <select class="form-select bg-dark text-light border-light" onchange="location = this.value;">
@@ -221,6 +221,45 @@
         </div>
     </div>
 
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-light" style="background-color: #1f1f1f;">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title text-warning" id="loginModalLabel">Login to GuitarHouse 🎸</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form action="auth/login.php" method="POST">
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control bg-dark text-light border-light" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label d-flex justify-content-between">
+                                Password
+                                <a href="forgot-password.php" class="text-warning small">Forgot?</a>
+                            </label>
+                            <input type="password" name="password" class="form-control bg-dark text-light border-light" required>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100">Login</button>
+                    </form>
+
+                    <div class="text-center my-3">— or —</div>
+
+                    <a href="auth/google-login.php" class="btn btn-outline-light w-100 mb-2">
+                        <i class="bi bi-google me-2"></i> Continue with Google
+                    </a>
+
+                    <p class="text-center mb-0">No account?
+                        <a href="register.php" class="text-info">Create one</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <?php include('includes/footer.php'); ?>
 
     <!-- Scroll to Top Button -->
@@ -229,11 +268,12 @@
     </button>
 
     <!-- Feedback Button -->
-     <a href="feedback.html" class="feedback-tab">Feedback</a>
+    <a href="feedback.html" class="feedback-tab">Feedback</a>
 
     <!-- JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/shop-script.js"></script>
 
 </body>
 
